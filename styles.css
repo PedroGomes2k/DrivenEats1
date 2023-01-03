@@ -1,0 +1,54 @@
+Body {
+width: 414px;
+height: auto;
+background-color: #bd5454;
+display: flex;
+flex-wrap: wrap;
+}
+
+.cabecalho{
+width: 414px;
+height: 92px;
+display: flex;
+flex-wrap: wrap;
+background-color:#CF2B2B;
+color: #FFFFFF;
+}
+h1{
+font-family: 'Righteous', cursive;
+font-size: 44px;
+margin-top: 10px;
+margin-left: 15px;
+cursor:pointer;
+}
+h2{
+font-family: 'Roboto', sans-serif;
+font-size: 18px;
+margin-left:15px;
+margin-top: -10px;
+}
+/*Final Cabecalho*/
+.container-principal{
+width: 414px;
+height: 300px;
+display: flex;
+background-color: #CBCBCB;
+}
+/* Final Container-principal*/
+.rodape{
+width: 414px;
+height:92px;
+background-color: #FFFFFF;
+
+}
+.fechar-pedido{
+display:flex;
+width: 364px;
+height: 61px;
+margin: 20px;
+background-color: #CBCBCB;
+text-align: center;
+color: #FFFFFF;
+font-weight: 20px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
