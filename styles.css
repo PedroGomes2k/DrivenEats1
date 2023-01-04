@@ -7,6 +7,8 @@ flex-wrap: wrap;
 border: 1px solid black;
 }
 
+/* Início Cabeçalho*/
+
 .cabecalho{
 width: 414px;
 height: 92px;
@@ -30,6 +32,7 @@ margin-top: -10px;
 }
 /*Final Cabecalho*/
 
+/* Início Container-principal*/
 
 .container-principal{
 width: 414px;
@@ -55,41 +58,43 @@ margin-top: 10px;
 overflow:hidden;
 margin-left: 13px;
 }
-.barra-refeiçoes div{
+.comida{
 display: flex;
 flex-wrap: wrap;
+flex-direction: row;
 width:172px;
-height: 215px;
+height: 216px;
 background-color: #FFFFFF;
 margin-right: 13px;
 border-radius: 4px;
 color: black;
 
 }
+
 .comida img{
 margin: 10px auto;
 }
+
 .texto-comida{
-width: 144px;
+width: 80%;
 display: flex;
-flex-direction: ;
+flex-wrap: wrap;
 margin-left: 12px;
-justify-content: space-between;
+justify-content:space-between ;
 
 }
 
 h4{
+width: 100%;
 font-size: 16px;
 font-weight: bold;
 color: #333333;
 font-family: 'Roboto', sans-serif;
-
 }
 h5{
 font-size: 15px;
 color: #A6A6A6;
 font-family: 'Roboto',sans-serif;
-margin-bottom: 00px;
 }
 
 
