@@ -11,13 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
-<body>  
+<body> 
+<div class="container-principal">
+<div class="pedido">
+    <div class="quadro-pedido-finalizado">
+        <p onclick="pedidopronto(this)" class="confirme">Confirme seu pedido</p>
+        <p onclick="pedidopronto(this)" class="comidafinal">Arroz com camarão</p>
+        <p onclick="pedidopronto(this)"class="preçofinal">25,90</p>
+        <p onclick="pedidopronto(this)" class="comidafinal">pesei gelada </p>
+        <p onclick="pedidopronto(this)" class="preçofinal">4,60</p>
+        <p onclick="pedidopronto(this)" class="comidafinal">Sorvete misto</p>
+        <p onclick="pedidopronto(this)" class="preçofinal">12,90</p>
+        <p onclick="pedidopronto(this)" class="totalfinal">Total</p>
+        <p onclick="pedidopronto(this)"class="preçototalfinal"> R$ 43,40</p>
+        <div class="podepedir"> <h6 class="podepedirtexto">Tudo certo, pode pedir</h6></div>
+        <p onclick="pedidopronto(this)" class="cancele">Cancelar</p>
+    </div>
+
+</div>
 <div class="cabecalho">
 <h1>DrivenEats</h1>
 <h2>Sua comida em 6 minutos!</h2>
 </div>  <!--Final cabeçalho-->
 
-<div class="container-principal"> 
+<div class="container-central"> 
 <h3>Primeiro, seu prato </h3>
 <div class="barra-comida" ::-webkit-scrollbar { display: none; }>
     <div class="comida1" data-test="dish" onclick="selectioncomida(this)">
@@ -26,7 +43,7 @@
         <div class="texto-comida">
         <h4 data-test="item-name"> Bife com fritas </h4>   
         <h5> Um pouco de arroz,um pouco de salada</h5>
-        <h6 data-test="item-price">R$ 14,90</h6>
+        <h6 data-test="item-price">R$ 11,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
         
@@ -37,7 +54,7 @@
         <div class="texto-comida">
         <h4 data-test="item-name"> Arroz com camarão</h4>
         <h5>Apenas arroz e camarão</h5>
-        <h6 data-test="item-price">R$ 14,90</h6>
+        <h6 data-test="item-price">R$ 25,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
         
@@ -72,7 +89,7 @@
         <div class="texto-comida">
         <h4 data-test="item-name">Guaraná gelado</h4>
         <h5>Lata 350ml</h5>
-        <h6 data-test="item-price">R$ 4,90</h6>
+        <h6 data-test="item-price">R$ 3,50</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
@@ -81,7 +98,7 @@
         <div class="texto-comida">
         <h4 data-test="item-name">Pepsi gelada</h4>
         <h5>Lata 350ml</h5>
-        <h6 data-test="item-price">R$ 4,90</h6>
+        <h6 data-test="item-price">R$ 4,60</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
@@ -110,14 +127,14 @@
         <img src="./imagens/sorvete-1.jpg">
         <div class="texto-comida">
         <h4 data-test="item-name">Sorteve misto</h4>
-        <h5>300g</h5>
+        <h5>Chocolate, baunilha ou misto</h5>
         <h6 data-test="item-price">R$ 12,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
 </div> 
 
-</div> <!--Final container-principal-->
+</div> <!--Final container-central-->
 
 <div class="rodape">
     <div class="fechar-pedido" data-test="order-btn" onclick="pedidopronto(this)"> 
@@ -125,7 +142,8 @@
     </div>
 </div> <!--Final rodape-->
 
+</div> <!-- FInal container-principal-->
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
  <script src="script.js"></script>   
 </body>
-</html>
+</html> 

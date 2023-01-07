@@ -98,5 +98,6 @@ if(comidaselecionada !== undefined){
 }   
 
 }
+
 function pedidopronto(){
 }
