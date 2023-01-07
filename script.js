@@ -21,7 +21,11 @@ selecionado === seletor
 // Adição do '-selecionada' na sua class pertencente
 selecionado.classList.add('-selecionada')
 
+comidaselecionada=selecionado.innerHTML
+fechamentodopedido()
 }
+
+let= comidaselecionada
 
 function selectionbebida(botaoclick){
 
@@ -43,8 +47,10 @@ selecionado === seletor
 // Adição do '-selecionada' na sua class pertencente
 selecionado.classList.add('-selecionada')
 
+bebidaselecionada=selecionado.innerHTML
+fechamentodopedido()
 }
-
+let= bebidaselecionada
 function selectionsobremesa(botaoclick){
 
 // Ver se ja existe algum tipo de class -selecionada
@@ -56,7 +62,6 @@ if(clickanterior !== null){
 clickanterior.classList.remove('-selecionada')
 }
 
-
 // Ele agora vai procurar dentro do DOM alguma class com esse elemento
 const seletor=document.querySelector('.barra-sobremesa .comida3')
 // variável explicada no primeiro bloco
@@ -65,24 +70,33 @@ selecionado === seletor
 // Adição do '-selecionada' na sua class pertencente
 selecionado.classList.add('-selecionada')
 
+sobremesaselecionada=selecionado.innerHTML
+fechamentodopedido()
 }
+let= sobremesaselecionada
 
-function pedidopronto(fechado){
-// quando as três refeiçoes forem escolhidas ele vai liberar o botão de fechar o pedido
+function fechamentodopedido(){
+// Sua função é quando a comida selecionada for diferente de nao defenida(undefined) ela pode prosseguir
+// Essa lógica vai seguir até o último selecionado
+if(comidaselecionada !== undefined){
+    
+    if(bebidaselecionada !== undefined){
+     
+        if(sobremesaselecionada !== undefined){
+        // Depois todos selecionados o botao de fechar pedido vai ser mudado 
 
-// o if só vai ocorrer quando os elmentos forem escolholidos será igual a true
-if(selecionados === true){
+        // Ele esta ultilizando o DOM para alterar a frase quando os itens acima forem selecionados
+        const fechar=document.querySelector('.h4')
+        // Frase alterado 
+        fechar.innerHTML=" Fechar pedido"
+        // Agora vai ser adcionado a class 'fechar-pedido' o 'pronto' para alterar a cor do botão
+        const finalizaçao=document.querySelector('.fechar-pedido')
+        finalizaçao.classList.add('pronto')
+        }
+    }
 
-// quando o botão de fechar pedido for acionado vai trocar a mensagem para fechar o pedido
-const fechar=document.querySelector('.h4')
-// troca do texto da class '.h4'
-fechar.innerHTML=" Fechar pedido"
+}   
 
-// Ao tempo que a mensagem for trocada, será trocada também a cor do fundo
-
-// Ela vai buscar a div com o DOM
-const finalizaçao=document.querySelector('.fechar-pedido')
-// Agora será adicionado a class '.pronto' a div 'fechar-pedido'
-finalizaçao.classList.add('pronto')
 }
+function pedidopronto(){
 }

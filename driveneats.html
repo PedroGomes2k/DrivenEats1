@@ -20,35 +20,35 @@
 <div class="container-principal"> 
 <h3>Primeiro, seu prato </h3>
 <div class="barra-comida" ::-webkit-scrollbar { display: none; }>
-    <div class="comida1" onclick="selectioncomida(this)">
+    <div class="comida1" data-test="dish" onclick="selectioncomida(this)">
        
-        <img src="./imagens/frango_yin_yang.png"> 
+        <img src="./imagens/bife3001.jpg"> 
         <div class="texto-comida">
-        <h4> Frango Yin Yang</h4>   
-        <h5> Um pouco de batata, um pouco de salada</h5>
-        <h6>R$ 14,90</h6>
+        <h4 data-test="item-name"> Bife com fritas </h4>   
+        <h5> Um pouco de arroz,um pouco de salada</h5>
+        <h6 data-test="item-price">R$ 14,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
         
     </div>
-    <div class="comida1" onclick="selectioncomida(this)">
+    <div class="comida1" data-test="dish" onclick="selectioncomida(this)">
         
-        <img src="./imagens/frango_yin_yang.png"> 
+        <img src="./imagens/arroz-de-camarao-7.jpg"> 
         <div class="texto-comida">
-        <h4> Frango Yin Yang</h4>
-        <h5> Um pouco de batata, um pouco de salada</h5>
-        <h6>R$ 14,90</h6>
+        <h4 data-test="item-name"> Arroz com camarão</h4>
+        <h5>Apenas arroz e camarão</h5>
+        <h6 data-test="item-price">R$ 14,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
         
     </div>
-    <div class="comida1" onclick="selectioncomida(this)" >
+    <div class="comida1" data-test="dish" onclick="selectioncomida(this)" >
         
         <img src="./imagens/frango_yin_yang.png"> 
         <div class="texto-comida">
-        <h4> Frango Yin Yang</h4>
+        <h4 data-test="item-name"> Frango Yin Yang</h4>
         <h5> Um pouco de batata, um pouco de salada</h5>
-        <h6>R$ 14,90</h6>
+        <h6 data-test="item-price">R$ 14,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
         
@@ -58,60 +58,60 @@
 
 <h3>Agora, sua bebida</h3>
 <div class="barra-bebida">
-    <div class="comida2" onclick="selectionbebida(this)">
+    <div class="comida2" data-test="drink" onclick="selectionbebida(this)">
         <img src="./imagens/coca-cola.png">
         <div class="texto-comida">
-        <h4>Coquinha gelada</h4>
+        <h4 data-test="item-name">Coquinha gelada</h4>
         <h5>Lata 350ml</h5>
-        <h6>R$ 4,90</h6>
+        <h6 data-test="item-price">R$ 4,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
-    <div class="comida2" onclick="selectionbebida(this)">
-        <img src="./imagens/coca-cola.png">
+    <div class="comida2" data-test="drink" onclick="selectionbebida(this)">
+        <img src="./imagens/guarana.png">
         <div class="texto-comida">
-        <h4>Coquinha gelada</h4>
+        <h4 data-test="item-name">Guaraná gelado</h4>
         <h5>Lata 350ml</h5>
-        <h6>R$ 4,90</h6>
+        <h6 data-test="item-price">R$ 4,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
-    <div class="comida2" onclick="selectionbebida(this)">
-        <img src="./imagens/coca-cola.png">
+    <div class="comida2" data-test="drink" onclick="selectionbebida(this)">
+        <img src="./imagens/pespsi2.png">
         <div class="texto-comida">
-        <h4>Coquinha gelada</h4>
+        <h4 data-test="item-name">Pepsi gelada</h4>
         <h5>Lata 350ml</h5>
-        <h6>R$ 4,90</h6>
+        <h6 data-test="item-price">R$ 4,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
 </div> 
 <h3>Por fim, sua sobremesa</h3>
 <div class="barra-sobremesa">
-    <div class="comida3" onclick="selectionsobremesa(this)">
+    <div class="comida3" data-test="dessert" onclick="selectionsobremesa(this)">
         <img src="./imagens/pudim.png">
         <div class="texto-comida">
-        <h4>Pudim</h4>
+        <h4 data-test="item-name">Pudim</h4>
         <h5>Apenas pudim</h5>
-        <h6>R$ 7,90</h6>
+        <h6 data-test="item-price">R$ 7,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
-    <div class="comida3" onclick="selectionsobremesa(this)">
-        <img src="./imagens/pudim.png">
+    <div class="comida3" data-test="dessert" onclick="selectionsobremesa(this)">
+        <img src="./imagens/acai-03-1000x1000.jpg">
         <div class="texto-comida">
-        <h4>Pudim</h4>
-        <h5>Apenas pudim</h5>
-        <h6>R$ 7,90</h6>
+        <h4 data-test="item-name">Açai com morango</h4>
+        <h5>200ml</h5>
+        <h6 data-test="item-price">R$ 10,00</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
-    <div class="comida3" onclick="selectionsobremesa(this)">
-        <img src="./imagens/pudim.png">
+    <div class="comida3" data-test="dessert" onclick="selectionsobremesa(this)">
+        <img src="./imagens/sorvete-1.jpg">
         <div class="texto-comida">
-        <h4>Pudim</h4>
-        <h5>Apenas pudim</h5>
-        <h6>R$ 7,90</h6>
+        <h4 data-test="item-name">Sorteve misto</h4>
+        <h5>300g</h5>
+        <h6 data-test="item-price">R$ 12,90</h6>
         <ion-icon name="checkmark-outline"></ion-icon>
         </div>
     </div>
@@ -120,7 +120,7 @@
 </div> <!--Final container-principal-->
 
 <div class="rodape">
-    <div class="fechar-pedido" onclick="pedidopronto(this)"> 
+    <div class="fechar-pedido" data-test="order-btn" onclick="pedidopronto(this)"> 
     <h4 class="h4">Selecione os 3 itens para fechar o pedido </h4>
     </div>
 </div> <!--Final rodape-->

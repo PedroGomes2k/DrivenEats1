@@ -92,6 +92,7 @@ button{
 width: 144px;
 height: 87px;
 margin:  auto;
+border-radius: 8px;
 }
 
 .texto-comida{
