@@ -1,132 +1,117 @@
-function selectioncomida(botaoclick){
+// armazenamento dos pididos e preços
+let nomecomida = "";
+let nomebebida = "";
+let nomesobremesa = "";
 
-// Ver se ja existe algum tipo de class -selecionada
-const clickanterior=document.querySelector('.barra-comida .-selecionada')
-// Caso não exista class -selecionada ele vai proseguir com a próxima função
-// Tudo isso vai acontecer caso ela seja diferente de null
-if(clickanterior !== null){
-// Porém, se houver alguma class -selecionada ele vai remove-la
-clickanterior.classList.remove('-selecionada')
-}
+let precoComida = ""
+let precoBebida = ""
+let precoSobremesa = ""
 
+let precoTotal = ""
+// Final armazenamento dos pedidos
+// Habilitar botao fechar pedido
+let contadorPedido = []
 
-// Ele agora vai procurar dentro do DOM alguma class com esse elemento
-const seletor=document.querySelector('.barra-comida .comida1')
-/*
-Esta variavel foi criada,pois nao consegui fazer a variavel seletor ser transformada em 'botaoclick'.
- Assim, tive que colocar um sendo igual ao o outro para que o código funcionasse
-*/
-const selecionado=botaoclick
-selecionado === seletor
-// Adição do '-selecionada' na sua class pertencente
-selecionado.classList.add('-selecionada')
+// Endereço do cliente
+let nomeEndereco="Não fornecido"
+let nomeCliente="Não fornecido"
+function selectioncomida(botaoclick) {
 
-comidaselecionada=selecionado.innerHTML
-
-console.log(comidafinal)
-fechamentodopedido()
-pedidoprontofinalizado()
-}
-
-let= comidaselecionada
-
-function selectionbebida(botaoclick){
-
-// Ver se ja existe algum tipo de class -selecionada
-const clickanterior=document.querySelector('.barra-bebida .-selecionada')
-// Caso não exista class -selecionada ele vai proseguir com a próxima função
-// Tudo isso vai acontecer caso ela seja diferente de null
-if(clickanterior !== null){
-// Porém, se houver alguma class -selecionada ele vai remove-la
-clickanterior.classList.remove('-selecionada')
-}
-
-
-// Ele agora vai procurar dentro do DOM alguma class com esse elemento
-const seletor=document.querySelector('.barra-comida .comida2')
-// Variavel explicada no primeiro bloco 
-const selecionado=botaoclick
-selecionado === seletor
-// Adição do '-selecionada' na sua class pertencente
-selecionado.classList.add('-selecionada')
-
-bebidaselecionada=selecionado.innerHTML
-
-fechamentodopedido()
-pedidoprontofinalizado()
-}
-
-let= bebidaselecionada
-let= bebidafinal
-
-function selectionsobremesa(botaoclick){
-
-// Ver se ja existe algum tipo de class -selecionada
-const clickanterior=document.querySelector('.barra-sobremesa .-selecionada')
-// Caso não exista class -selecionada ele vai proseguir com a próxima função
-// Tudo isso vai acontecer caso ela seja diferente de null
-if(clickanterior !== null){
-// Porém, se houver alguma class -selecionada ele vai remove-la
-clickanterior.classList.remove('-selecionada')
-}
-
-// Ele agora vai procurar dentro do DOM alguma class com esse elemento
-const seletor=document.querySelector('.barra-sobremesa .comida3')
-// variável explicada no primeiro bloco
-const selecionado=botaoclick
-selecionado === seletor
-// Adição do '-selecionada' na sua class pertencente
-selecionado.classList.add('-selecionada')
-
-sobremesaselecionada=selecionado.innerHTML
-
-fechamentodopedido()
-pedidoprontofinalizado()
-}
-let= sobremesaselecionada
-let= sobremesafinal
-function fechamentodopedido(){
-// Sua função é quando a comida selecionada for diferente de nao defenida(undefined) ela pode prosseguir
-// Essa lógica vai seguir até o último selecionado
-if(comidaselecionada !== undefined){
-    console.log(comidaselecionada)
-    if(bebidaselecionada !== undefined){
-     console.log(bebidaselecionada)
-        if(sobremesaselecionada !== undefined){
-            console.log(sobremesaselecionada)
-        // Depois todos selecionados o botao de fechar pedido vai ser mudado 
-
-        // Ele esta ultilizando o DOM para alterar a frase quando os itens acima forem selecionados
-        const fechar=document.querySelector('.h4')
-        // Frase alterado 
-        fechar.innerHTML=" Fechar pedido"
-        // Agora vai ser adcionado a class 'fechar-pedido' o 'pronto' para alterar a cor do botão
-        const finalizaçao=document.querySelector('.fechar-pedido')
-        finalizaçao.classList.add('pronto')
-        }
+    let categorias = document.querySelector('.barra-comida ');
+    let selecionado = categorias.querySelector('.-selecionada')
+    if (selecionado !== null) {
+        selecionado.classList.remove('-selecionada')
     }
+    botaoclick.classList.add('-selecionada')
+    nomecomida = botaoclick.querySelector('h4').innerHTML
+    precoComida = Number(botaoclick.querySelector('h6').innerHTML.replace("R$", "").replace(",", "."))
+    console.log(nomecomida, precoComida)
 
-}   
+    contadorPedido.push(1)
+    selecionados()
+}
+function selectionbebida(botaoclick) {
 
+    let categorias = document.querySelector('.barra-bebida ');
+    let selecionado = categorias.querySelector('.-selecionada')
+    if (selecionado !== null) {
+        selecionado.classList.remove('-selecionada')
+    }
+    botaoclick.classList.add('-selecionada')
+    nomebebida = botaoclick.querySelector('h4').innerHTML
+    precoBebida = Number(botaoclick.querySelector('h6').innerHTML.replace("R$", "").replace(",", "."))
+    console.log(nomebebida, precoBebida)
+
+    contadorPedido.push(2)
+    selecionados()
 }
 
-function pedidopronto(botaoclick){
-    // Entra dentro da DOM e seleciona a class 'pedido' para fazer o adcionamento de '-finalizado'
-    const pronto=document.querySelector('.pedido')
-    // Após ter selecionado o elemento ele vai adcionar na class '-finalizado'
-    pronto.classList.add('-finalizado')   
+function selectionsobremesa(botaoclick) {
 
+    let categorias = document.querySelector('.barra-sobremesa');
+    let selecionado = categorias.querySelector('.-selecionada')
+    if (selecionado !== null) {
+        selecionado.classList.remove('-selecionada')
+    }
+    botaoclick.classList.add('-selecionada')
+    nomesobremesa = botaoclick.querySelector('h4').innerHTML
+    precoSobremesa = Number(botaoclick.querySelector('h6').innerHTML.replace("R$", "").replace(",", "."))
+    console.log(nomesobremesa, precoSobremesa)
+
+    contadorPedido.push(3)
+    selecionados()
+}
+
+function selecionados() {
+    if (contadorPedido.length === 3) {
+        document.querySelector('.fechar-pedido h4').innerHTML = "Fechar pedido"
+        document.querySelector('.fechar-pedido').classList.add('pronto')
+        document.querySelector('.fechar-pedido').removeAttribute('disabled')
+    }
+}
+
+// 
+function pedidopronto() {
+    document.querySelector('.background').classList.remove('pedido')
+    document.querySelector('.quadro-pedido-finalizado').classList.remove('pedido')
+
+    document.querySelector('.quadro-pedido-finalizado .comidapreco .item').innerHTML = nomecomida
+    document.querySelector('.quadro-pedido-finalizado .comidapreco .preco').innerHTML = precoComida.toFixed(2).replace(".", ",")
+
+    document.querySelector('.quadro-pedido-finalizado .bebidapreco .item').innerHTML = nomebebida
+    document.querySelector('.quadro-pedido-finalizado .bebidapreco .preco').innerHTML = precoBebida.toFixed(2).replace(".", ",")
+
+
+    document.querySelector('.quadro-pedido-finalizado .sobremesapreco .item').innerHTML = nomesobremesa
+    document.querySelector('.quadro-pedido-finalizado .sobremesapreco .preco').innerHTML = precoSobremesa.toFixed(2).replace(".", ",")
+
+    precoTotal = `R$ ${(precoComida + precoBebida + precoSobremesa).toFixed(2).replace(".", ",")}`
+    document.querySelector('.precototalfinal').innerHTML = precoTotal
+
+    nomeCliente=prompt("Digite seu nome:")
+    nomeEndereco=prompt("Digite seu endenreço:")
+    if(nomeCliente === null || nomeEndereco ===null ){
+        nomeCliente="Não informado"
+        nomeEndereco="Não informado"
+    }
     
 }
 
+function cancelado() {
+    document.querySelector('.background ').classList.toggle('pedido')
+    document.querySelector('.quadro-pedido-finalizado ').classList.toggle('pedido')
+}
 
-function pedidoprontofinalizado(){
-const comida=document.querySelector('.quadro-pedido-finlizado .comidafinal')
-comida.innerHTML(comidafinal)
-const bebida=document.querySelector('.quadro-pedido-finlizado .bebidafinal')
-console.log(bebida)
-bebida.innerHTML(bebidafinal)
-const sobremesa=document.querySelector('.quadro-pedido-finlizado .sobremesafinal')
-console.log(sobremesa)
-sobremesa.innerHTML(sobremesafinal)
+function finalizado() {
+let msgZap=`Olá, gostaria de fazer o pedido:
+- Prato: ${nomecomida}
+- Bebida: ${nomebebida}
+- Sobremesa: ${nomesobremesa}
+Total: ${precoTotal}
+
+Nome: ${nomeCliente}
+Endereço: ${nomeEndereco}`
+console.log(msgZap)
+
+window.open(`https://wa.me/552171516055?text=${msgZap}`, '_blank');
 }
