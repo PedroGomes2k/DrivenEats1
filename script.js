@@ -22,7 +22,7 @@ selecionado === seletor
 selecionado.classList.add('-selecionada')
 
 comidaselecionada=selecionado.innerHTML
-const comidafinal=document.querySelector("barra-comida")
+
 console.log(comidafinal)
 fechamentodopedido()
 pedidoprontofinalizado()
@@ -51,8 +51,7 @@ selecionado === seletor
 selecionado.classList.add('-selecionada')
 
 bebidaselecionada=selecionado.innerHTML
-let bebidafinalescolhida=documenet.querySelector('.barra-bebida .comida2 .bebidaescolhida')
-bebidafinal=bebidafinalescolhida.innerHTml
+
 fechamentodopedido()
 pedidoprontofinalizado()
 }
@@ -80,8 +79,7 @@ selecionado === seletor
 selecionado.classList.add('-selecionada')
 
 sobremesaselecionada=selecionado.innerHTML
-let sobremesafinalescolhida=documenet.querySelector('.barra-sobremesa .comida3 .sobremesaescolhida')
-sobremesafinal=sobremesafinalescolhida.innerHTml
+
 fechamentodopedido()
 pedidoprontofinalizado()
 }
