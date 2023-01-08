@@ -22,7 +22,10 @@ selecionado === seletor
 selecionado.classList.add('-selecionada')
 
 comidaselecionada=selecionado.innerHTML
+const comidafinal=document.querySelector("barra-comida")
+console.log(comidafinal)
 fechamentodopedido()
+pedidoprontofinalizado()
 }
 
 let= comidaselecionada
@@ -48,9 +51,15 @@ selecionado === seletor
 selecionado.classList.add('-selecionada')
 
 bebidaselecionada=selecionado.innerHTML
+let bebidafinalescolhida=documenet.querySelector('.barra-bebida .comida2 .bebidaescolhida')
+bebidafinal=bebidafinalescolhida.innerHTml
 fechamentodopedido()
+pedidoprontofinalizado()
 }
+
 let= bebidaselecionada
+let= bebidafinal
+
 function selectionsobremesa(botaoclick){
 
 // Ver se ja existe algum tipo de class -selecionada
@@ -71,18 +80,22 @@ selecionado === seletor
 selecionado.classList.add('-selecionada')
 
 sobremesaselecionada=selecionado.innerHTML
+let sobremesafinalescolhida=documenet.querySelector('.barra-sobremesa .comida3 .sobremesaescolhida')
+sobremesafinal=sobremesafinalescolhida.innerHTml
 fechamentodopedido()
+pedidoprontofinalizado()
 }
 let= sobremesaselecionada
-
+let= sobremesafinal
 function fechamentodopedido(){
 // Sua função é quando a comida selecionada for diferente de nao defenida(undefined) ela pode prosseguir
 // Essa lógica vai seguir até o último selecionado
 if(comidaselecionada !== undefined){
-    
+    console.log(comidaselecionada)
     if(bebidaselecionada !== undefined){
-     
+     console.log(bebidaselecionada)
         if(sobremesaselecionada !== undefined){
+            console.log(sobremesaselecionada)
         // Depois todos selecionados o botao de fechar pedido vai ser mudado 
 
         // Ele esta ultilizando o DOM para alterar a frase quando os itens acima forem selecionados
@@ -99,5 +112,23 @@ if(comidaselecionada !== undefined){
 
 }
 
-function pedidopronto(){
+function pedidopronto(botaoclick){
+    // Entra dentro da DOM e seleciona a class 'pedido' para fazer o adcionamento de '-finalizado'
+    const pronto=document.querySelector('.pedido')
+    // Após ter selecionado o elemento ele vai adcionar na class '-finalizado'
+    pronto.classList.add('-finalizado')   
+
+    
+}
+
+
+function pedidoprontofinalizado(){
+const comida=document.querySelector('.quadro-pedido-finlizado .comidafinal')
+comida.innerHTML(comidafinal)
+const bebida=document.querySelector('.quadro-pedido-finlizado .bebidafinal')
+console.log(bebida)
+bebida.innerHTML(bebidafinal)
+const sobremesa=document.querySelector('.quadro-pedido-finlizado .sobremesafinal')
+console.log(sobremesa)
+sobremesa.innerHTML(sobremesafinal)
 }
