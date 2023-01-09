@@ -132,7 +132,7 @@
 
         </div> <!--Final rodape-->
         <div class="background pedido"></div>
-        <div class="quadro-pedido-finalizado pedido">
+        <div class="quadro-pedido-finalizado pedido" data-test="confirm-order-modal">
             <p class="confirme">Confirme seu pedido</p>
             <div class="comidapreco">
                 <p class="item">Arroz com camarão</p>
@@ -151,8 +151,8 @@
                 <p class="precototalfinal"> R$ 43,40</p>
             </div>
             <div class="podepedir">
-                <button onclick="finalizado()" class="podepedirtexto">Tudo certo, pode pedir</button>
-                <button onclick="cancelado()" class="cancele">Cancelar</button>
+                <button onclick="finalizado()" class="podepedirtexto" data-test="confirm-order-btn">Tudo certo, pode pedir</button>
+                <button onclick="cancelado()" class="cancele" data-test="cancel-order-btn">Cancelar</button>
             </div>
 
         </div>
